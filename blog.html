@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="nav"><h1>My Blog&nbsp;<button id="but1">Register</button>
+        <button id="but2">Login</button> &nbsp;<button id="btn2">view</button><a href="blog.html">Add post</a></h1></div><div class="post">
+    <form action="post.php" method="post">
+        <h2>Add new blog</h2>
+        <textarea name="user" id="user" cols="90" rows="2" placeholder="Creator name"></textarea><br>
+        <textarea name="title" id="title" cols="90" rows="4" placeholder="Add Title"></textarea><br>
+    <textarea name="post" id="post" cols="90" rows="20" placeholder="Body of the blog"></textarea><br>
+    <input type="submit" value="post" name="add">
+
+</form>
+
+    </div>
+
+
+    <div class="square">
+    <script>
+                $(document).ready(function(){
+          $("#btn2").click(function(){
+          $.ajax({
+              url:'post.html',
+              success:function(data){
+                  $('.square').html(data);
+              }
+          })
+          });
+
+          $("#but1").click(function(){
+          $.ajax({
+              url:'register.html',
+              success:function(data){
+                  $('.post').html(data);
+              }
+          })
+          });
+
+          $("#but2").click(function(){
+          $.ajax({
+              url:'login.html',
+              success:function(data){
+                  $('.post').html(data);
+              }
+          })
+          });
+        });
+    </script>
+    </div>
+</body>
+</html>

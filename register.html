@@ -1,0 +1,31 @@
+<div class="reg">
+<h1>Register</h1>
+<form action="datareg.php" method="post" >
+<table><tr><td>
+    Enter your name</td><td><input type="text" name="name" class="in"><br></td></tr>
+<tr><td>Enter your email</td><td><input type="email" name="email" class="in"><br></td></tr>
+<tr><td>Enter your phone</td><td><input type="number" name="phone" class="in"><br></td></tr>
+<tr><td>Enter new password</td><td><input type="password" name="pass" class="in"><br></td></tr>
+<tr><td><input class="bn" type="submit" value="submit" name="submit"></td><td><input class="bn" type="submit" value="cancel"name="delete"></td></tr>
+</table>
+</form>
+
+</div>
+<style>
+    .reg table{
+        background-color: antiquewhite;
+        width: 700px;
+        height: 300px;
+        border: 5px solid red;
+        color: black;
+    }
+    .in{
+        width: 300px;
+        height: 40px;
+        font-size: 200%;
+    }
+    .bn{
+        width:90px;
+        height:30px;
+    }
+</style>
